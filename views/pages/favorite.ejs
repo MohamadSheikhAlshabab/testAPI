@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>favorite</title>
+</head>
+<body>
+    <header>
+        <h1>my favorite</h1>
+    </header>
+    <main>
+         <div class="All">
+                <%data.forEach(val=>{%>
+                <div class="container">
+                    <h3><%=val.name%></h3>
+                    <img src="<%=val.img%>" alt="<%=val.name%>">
+                    <p><%=val.level%></p>
+                    </div>
+                <%})%>
+            </div>
+    </main>
+    
+</body>
+</html>

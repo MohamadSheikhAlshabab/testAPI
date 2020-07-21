@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- <%console.log(data)%> -->
+    <header>
+        <h1>All Digimons</h1>
+        <nav></nav>
+        <main>
+            <div class="All">
+                <%data.forEach(val=>{%>
+                <div class="container">
+                    <div>
+                        <div>
+                            <h3><%=val.name%></h3>
+                            <br />
+                            <img src="<%=val.img%>" alt="<%=val.name%>" /> <br />
+                            <p><%=val.level%></p>
+                            <br />
+                        </div>
+
+                        <div>
+                            <form action="/addToDb" method="get">
+                                <input type="text" value="<%=val.name%>" name="name" /> <br />
+                                <input type="text" value="<%=val.img%>" name="img" /> <br />
+                                <input type="text" value="<%=val.level%>" name="level" /><br />
+                                <input type="submit" value="ADD" /><br />
+                            </form>
+                        </div>
+                    </div>
+                    <%})%>
+                </div>
+            </div>
+        </main>
+    </header>
+</body>
+
+</html>
