@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <title>favorite</title>
 </head>
+
 <body>
     <header>
-        <h1>my favorite</h1>
+        <header>favorite</header>
+        <nav>
+            <a href="/">index</a>
+            <a href="selectData">fav</a>
+        </nav>
     </header>
     <main>
-         <div class="All">
-                <%data.forEach(val=>{%>
-                <div class="container">
-                    <h3><%=val.name%></h3>
-                    <img src="<%=val.img%>" alt="<%=val.name%>">
-                    <p><%=val.level%></p>
-                    </div>
-                <%})%>
+        <div id="All1">
+            <%data.forEach(val=>{%>
+            <div class="container1">
+                <h3><%=val.name%></h3>
+                <img src="<%=val.img%>" alt="<%=val.name%>">
+                <p><%=val.level%></p>
+                <a href="/details/<%=val.id%>"><button>show details</button></a>
             </div>
+            <%})%>
+        </div>
     </main>
-    
+
 </body>
+
 </html>

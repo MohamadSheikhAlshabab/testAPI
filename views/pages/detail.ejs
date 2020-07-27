@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <title>Details</title>
+</head>
+
+<body>
+    <header>
+        <h1>Details</h1>
+        <nav>
+            <a href="/">index</a>
+            <a href="../selectData">fav</a>
+        </nav>
+    </header>
+    <main>
+
+        <!-- <%console.log(data)%> -->
+        <div id="All2">
+            <div class="container2">
+                <div>
+                    <h3><%=data.name%></h3>
+                    <br />
+                    <img src="<%=data.img%>" alt="<%=data.name%>" /> <br />
+                    <p><%=data.level%></p>
+                </div>
+                <div>
+                    <form action="/update/<%=data.id%>?_method=put" method="post">
+                        <input type="text" name="name" value="<%=data.name%>">
+                        <input type="text" name="img" value="<%=data.img%>">
+                        <input type="text" name="level" value="<%=data.level%>">
+                        <input type="submit" value="update">
+                    </form>
+                </div>
+                <div>
+                    <form action="/delete/<%=data.id%>?_method=delete" method="post">
+                        <input type="submit" value="delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
